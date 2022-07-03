@@ -51,6 +51,8 @@ app.get("/api/os", (req, res, next) => {
 app.get("/api/os/:dniUsuario", (req, res, next) => {
   const { dniUsuario } = req.params;
 
+  console.log("here")
+
   ObraSocial.find({ dniUsuario: dniUsuario })
     .then((data) => res.json(data))
     .catch(next);
@@ -73,6 +75,7 @@ app.put("/api/os/:id", (req, res, next) => {
 });
 
 const errorHandler = (error, req, res, next) => {
+  console.log("error")
   console.error(error.message)
   console.error(error.name)
 
