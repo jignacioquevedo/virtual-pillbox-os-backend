@@ -43,6 +43,11 @@ app.post("/api/os", (req, res, next) => {
     .catch(next);
 });
 
+app.get("/api/os", (req, res, next) => {
+  res.status(200).json({success: 'App working'})
+});
+
+
 app.get("/api/os/:dniUsuario", (req, res, next) => {
   const { dniUsuario } = req.params;
 
