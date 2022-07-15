@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 const ObraSocial = require("./models/ObraSocial");
 
 const app = express();
